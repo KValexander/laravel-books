@@ -1,0 +1,504 @@
+/*Подключение шрифтов*/
+/*===================*/
+@font-face {
+	font-family: IBMPlexSans;
+	src: url("../fonts/IBMPlex/IBMPlexSans-Regular.ttf");
+}
+@font-face {
+	font-family: IBMPlexSans-Medium;
+	src: url("../fonts/IBMPlex/IBMPlexSans-Medium.ttf");
+}
+@font-face {
+	font-family: Fulbo_Argenta;
+	src: url("../fonts/Fulbo_Argenta.otf");
+}
+
+/*Общие настройки стилей*/
+/*========================*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 14pt;
+	font-family: IBMPlexSans;
+	color: #124258;
+}
+
+div.edge {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: #124258;
+}
+
+a:hover {
+	transition: .2s;
+	color: #2fba90;
+}
+
+a:not(:hover) {
+	transition: .2s;
+}
+
+input[type=file] {
+	display:none;
+}
+
+
+/*Стили для хедера*/
+/*==================*/
+header {
+	overflow: hidden;
+	padding: 20px;
+	height: 80px;
+	/*box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);*/
+	border-bottom: solid 3px #004243; /*#386e88*/
+}
+
+header div.icon {
+	background: url("../logo_off.png") no-repeat;
+	background-size: 100% 100%;
+	width: 50px;
+	height: 50px;
+	margin-right: 230px;
+	margin-top: -8px;
+	float: left;
+}
+
+header div.icon:hover {
+	color: #007972;
+	transition: .2s;
+	background: url("../logo_on.png") no-repeat;
+	background-size: 100% 100%;
+}
+header div.icon:not(:hover) {
+	transition: .2s;
+	color: #124258;
+}
+
+header h1 {
+	float: left;
+	margin-left: 60px;
+	line-height: 50px;
+}
+
+header div.search {
+	float: left;
+	margin-right: 10px;
+}
+
+header input {
+	position: relative;
+	top: -6px;
+}
+
+header input[type=button] {
+	outline: none;
+	margin-top: 5px;
+	width: 100px;
+	border: none;
+	height: 40px;
+	font-size: 14pt;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+header input[type=button]:hover {
+	transition: .2s;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+header input[type=button]:not(:hover) {
+	transition: .2s;
+	box-shadow: none;
+}
+
+header input[type=text] {
+	outline: none;
+	margin-top: 5px;
+	width: 400px;
+	border: none;
+	height: 40px;
+	font-size: 14pt;
+	padding-left: 5px;
+	border: solid 1px #124258;
+	border-left: solid 3px #124258;
+}
+
+header input[type=text]:focus {
+	transition: .2s;
+	border-left: solid 5px #007972;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+header input[type=text]:not(:focus) {
+	transition: .2s;
+}
+
+header div.session {
+	text-align: right;
+}
+
+header div.session a {
+	line-height: 37px;
+	padding: 10px;
+}
+
+/* Стили для меню */
+/*==================*/
+nav {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	min-height: 45px;
+}
+
+nav a {
+	text-decoration: none;
+	padding: 10px;
+}
+
+nav a:hover {
+	transition: .2s;
+	background-color: #004243;
+	color: #f7eeec;
+}
+
+nav a:not(:hover) {
+	transition: .2s;
+}
+
+/*Стили для контентной части страницы*/
+/*=====================================*/
+main {
+	min-height: calc(100vh - 251px);
+}
+
+/*Стили для заголовка страницы*/
+div.head {
+	margin: 20px 0 20px 0;
+	min-height: 10px;
+	padding: 10px;
+	border-bottom: solid 3px #004243;
+}
+
+/*Стили для контента главной страницы*/
+div.content {
+	padding: 10px;
+	margin: 20px 0 20px 0;
+}
+
+div.content h2.head {
+	margin-bottom: 10px;
+}
+
+/*Стили записей главной страницы*/
+div.content div.record {
+	/*float: left;*/
+	display: inline-flex;
+	overflow: hidden;
+	width: 19%;
+	margin: 4px;
+	height: 320px;
+	background-color: #eee;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+div.content div.record img {
+	width: 100%;
+	height: 320px;
+	object-fit: cover;
+}
+
+div.content div.record div.overlay {
+	position: absolute;
+	margin-top: 260px;
+	width: 224px;
+	min-height: 60px;
+	height: 60px;
+	background-color: rgba(255,255,255,0.9);
+}
+
+div.content div.record div.overlay p{
+	padding: 5px 0 5px 5px;
+	height: 30px;
+	font-family: Fulbo_Argenta;
+	overflow: hidden;
+}
+
+/*Стили для страницы добавления книг*/
+/*===================================*/
+
+div.form {
+	overflow: hidden;
+}
+
+div.form div.left, div.form div.right {
+	width: 49%;
+	float: left;
+}
+
+div.form div.left {
+	margin-right: 23px;
+}
+
+div.form p {
+	color: #004243;
+	margin-top: 10px;
+}
+div.form input, div.form select, div.form textarea {
+	width: 100%;
+	color: #124258;
+	outline:none;
+	font-size: 14pt;
+	padding-left: 5px;
+	height: 42px;
+	margin: 10px 0 10px 0;
+	border: solid 1px #013300;
+}
+
+div.form input[type=button] {
+	background: #124258;
+	color: #f7eeec;
+}
+
+div.form input[type=button]:hover {
+	transition: .2s;
+	background-color: #007972;
+}
+div.form input[type=button]:not(:hover) {
+	transition: .2s;
+}
+
+div.form input:focus, div.form select:focus {
+	transition: .2s;
+	border: solid 1px black;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+div.form input:not(:focus), div.form select:not(:focus) {
+	transition: .2s;
+}
+
+input.load {
+	display: none;
+}
+
+div.form textarea {
+	/*text-indent: 20px;*/
+	width: 100%;
+	border: none;
+	border-left: solid 3px #013300;
+	padding: 10px;
+	resize: none;
+	min-height: 40px;
+	overflow: hidden;
+	font-family: Arial;
+}
+
+div.form textarea:focus {
+	transition: .2s;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+div.form textarea:not(:focus) {
+	transition: .2s;
+}
+
+div.form .min {
+	width: 60%;
+}
+
+div.form input[type=button].min {
+	position: relative;
+	width: 39%;
+	top: -1px;
+}
+
+/* Стили для страницы книги */
+/*============================*/
+div.characteristic {
+	overflow: hidden;
+	margin: 20px 0 20px 0;
+	width: 100%;
+	/*border: solid 1px rgba(0,0,0,0.3);*/
+}
+
+/*Стили для описательной части страницы книги*/
+div.characteristic div.cover {
+	float: left;
+	width: 262px;
+	height: 352px;
+	padding: 10px;
+	margin-right: 10px;
+	border: solid 1px rgba(0,0,0,0.3);
+}
+
+div.characteristic div.cover img {
+	width: 240px;
+	height: 330px;
+	object-fit: cover;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+div.characteristic div.desc {
+	float: left;
+	width: calc(100% - 272px);
+	padding: 0px 20px 20px 20px;
+}
+
+div.characteristic div.desc p {
+	padding-bottom: 10px;
+	font-size: 12pt;
+}
+
+div.characteristic div.desc span {
+	color: gray;
+}
+div.characteristic div.desc p.margin {
+	margin-bottom: 10px;
+}
+
+div.characteristic div.desc div.p {
+	overflow: hidden;
+}
+
+div.characteristic div.desc div.p p {
+	float: left;
+}
+div.characteristic div.desc div.p p.name {
+	width: 150px;
+}
+div.characteristic div.desc div.p p.content {
+	width: calc(100% - 150px);
+}
+
+div.characteristic div.desc input {
+	width: 150px;
+	height: 30px;
+	outline: none;
+	font-size: 12pt;
+	margin-top: 15px;
+	background:transparent;
+	border-radius: 5px;
+	border: solid 1px rgba(0,0,0,0.3);
+}
+
+div.characteristic div.desc input:hover {
+	transition: .2s;
+	border: solid 1px #007972;
+	color: #007972; /*#2fba90*/
+}
+
+div.characteristic div.desc input:not(:hover) {
+	transition: .2s;
+}
+
+/*Стили для нижней части страницы книги*/
+div.tabs {
+	overflow: hidden;
+	width: 100%;
+	border-bottom: solid 1px rgba(0,0,0,0.3);
+}
+
+div.tabs div.tab {
+	float: left;
+	cursor: pointer;
+	padding: 10px;
+	margin-right: 10px;
+	/*border-bottom: solid 3px #124258;*/
+}
+
+div.tabs_content {
+	padding: 10px 0 10px 0;
+}
+
+div.tabs_content div.tab_content {
+	display: none;
+	padding: 10px;
+}
+
+div.tabs_content p {
+	padding: 5px 0 5px 0;
+	font-size: 12pt;
+}
+div.tabs_content h3{
+	margin-bottom: 10px;
+}
+div.tabs_content h3.margin {
+	margin-top: 30px;
+}
+
+/*Стили для таба "Информация"*/
+div#annotation {
+	font-size: 12pt;
+}
+
+/*Стили для таба "Содержание"*/
+div.book_volume {
+	width: 100%;
+	margin: 10px 0;
+	margin-left: 20px;
+}
+div.book_volume h4 {
+	margin-bottom: 10px;
+}
+div.book_chapters {
+	width: calc(100% - 33px);
+	padding: 5px;
+	margin-left: 20px;
+	border-bottom: solid 1px rgba(0,0,0,0.3);
+}
+div.book_chapters p {
+	padding: 0;
+}
+div.book_chapters:hover {
+	transition: .2s;
+	color: #007972;
+	border-left: solid 3px #007972;
+}
+div.book_chapters:not(:hover) {
+	transition: .2s;
+	border-left: solid 0px #007972;
+}
+
+/*Стили для страницы добавления главы*/
+/*=====================================*/
+div#text_content {
+	float: left;
+	margin: 20px 0 10px 0;
+	padding: 10px;
+	width: 100%;
+	border-left: solid 3px #013300;
+}
+div#text_content h2 p {
+	text-align: center;
+}
+div#text_content p {
+	padding: 5px 0 5px 0;
+	text-align: justify;
+}
+div#text_content span {
+	color: gray;
+}
+
+/*Стили для страницы главы*/
+/*==========================*/
+div.chapter_content {
+	overflow: hidden;
+}
+
+
+/*Стили для футера*/
+/*==================*/
+footer {
+	margin-top: 30px;
+	height: 76px;
+	padding: 10px;
+	border-top: solid 3px #386e88;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

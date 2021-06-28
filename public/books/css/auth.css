@@ -1,0 +1,95 @@
+body {
+	background: url("../images/background.png") no-repeat right center fixed;
+    background-size: cover;
+    background-color: white;
+}
+
+::-webkit-input-placeholder {
+   color: rgba(0,66,67, 0.9);
+}
+
+a {
+	text-decoration: none;
+	color: #124258;
+}
+a:hover {
+	transition: .2s;
+	color: #03786f;
+}
+a:not(:hover) {
+	transition: .2s;
+}
+a.link {
+	color: #001416;
+}
+a.link:hover {
+	color: #f7eeec;
+}
+
+div.center {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	margin: 70px 0 70px 0;
+}
+
+div.auth {
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	color: #f7eeec;
+	width: 500px;
+	min-height: 300px;
+	padding: 20px;
+	margin-bottom: 20px;
+	background-color: rgba(0,66,67, 0.9);
+}
+
+div.auth h2 {
+	margin: 10px;
+}
+
+div.auth input {
+	width: 90%;
+	color: #f7eeec;
+	outline:none;
+	font-size: 14pt;
+	padding-left: 5px;
+	height: 40px;
+	margin: 10px;
+	border: solid 1px #013300;
+	background-color: #001416;
+}
+
+div.auth select {
+	width: 90%;
+	color: #f7eeec;
+	outline:none;
+	font-size: 14pt;
+	padding-left: 5px;
+	height: 40px;
+	margin: 10px;
+	border: solid 1px #013300;
+	background-color: #001416;
+}
+
+div.auth input:focus, div.auth select:focus {
+	transition: .2s;
+	border: solid 1px #013300;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+div.auth input:not(:focus), div.auth select:not(:focus) {
+	transition: .2s;
+}
+
+div.auth input[type=button] {
+	border: none;
+	background-color: #004243;
+	color:  #f7eeec;
+}
+
+div.auth input[type=button]:hover {
+	background-color: #007972;
+	color: #f7eeec;
+}
